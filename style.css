@@ -1,0 +1,64 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+
+    font-family: 'Helvetica Neue', 'Segoe UI Light', 'Roboto Sans', sans-serif;
+}
+
+.container {
+    margin: 0 auto;
+}
+
+@media (min-width: 360px) {
+    .container { width: 90%; }
+}
+
+@media (min-width: 760px) {
+    .container { width: 70%; }
+}
+
+@media (min-width: 1200px) {
+    .container { width: 50%; }
+}
+
+.header {
+    font-weight: 200;
+    font-size: 2.5rem;
+}
+
+.text-center {
+    text-align: center !important;
+}
+
+.lead {
+    font-weight: 100;
+    font-size: 1.1rem;
+}
+
+.example {
+    width: 100%;
+    margin: 2rem auto;
+    padding: 0.2rem 0.2rem;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+}
+
+.example-desc {
+    font-size: 1.1rem;
+    font-weight: 300;
+    padding: 0.2rem 1rem;
+}
+
+.example code, .example pre {
+    display: block;
+    padding-left: 2rem;
+    padding-right: 1rem;
+    padding-bottom: 1rem;
+    text-align: left !important;
+    word-break: break-all;
+    
+}
