@@ -27,7 +27,6 @@ var El = function(query) {
      * and actual query
     !*/
     if (query.queued && query.queued === true) {
-        console.log('query.qeued == true');
         this.model = query.model;
         this.element = query.element;
         this.query = query.query;
@@ -36,19 +35,15 @@ var El = function(query) {
     /* If the model is empty
      * then build a model from query
     !*/
-    console.log('BEFORE', 'this.model =', this.model);
     if (this.model === undefined)
         this.model = this.createModel(this.query);
-    console.log('AFTER', 'this.model =', this.model);
 
     /* If the element is empty
      * assemble an element from
      * the model object
     !*/
-    console.log('BEFORE', 'this.element =', this.element);
     if (this.element === undefined)
         this.element = this.assembleElement(this.model)
-    console.log('AFTER', 'this.element =', this.element);
 
     /* If El is not yet loaded
      * create a new object and
@@ -68,12 +63,10 @@ var El = function(query) {
      * the element is an HTML element
      * try to set the parent
     !*/
-    console.log('BEFORE', 'this.model.parent =', this.model.parent);
     if (typeof(this.model) === 'object' 
         && this.element.ownerDocument
         && this.DOMLoaded)
         this.model.parent = this.getParent(this.query);
-    console.log('AFTER', 'this.model.parent =', this.model.parent);
 
     /* If the parent is set
      * attempt to append the HTML element
