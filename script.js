@@ -1,10 +1,10 @@
 var cont = new El('+div.container');
 var h = new El('+h1.header.text-center@.container$(Element/ary Library)');
 var p = new El('+p.text-center.lead@.container$(It has never been easier to create HTML elements with JavaScript!)');
-new El('+p.text-center@.container$(This page has been created entirely with the Element/ary Library!<br>\(Check the source code\))');
+new El('+p.text-center@.container$(This page has been created entirely with the Element/ary Library! Check the source code)');
 
 new El('+div#ex1.example@.container');
-new El('+p.example-desc@#ex1$(Creating an element with class <i>container</i> and appending it to the <i>\<\bbody\></i>)');
+new El('+p.example-desc@#ex1$(Creating an element with class container and appending it to the <body>)');
 var code1 = new El('+code@#ex1');
 code1.innerHTML += `Old-school HTML style<br>
 var cont = document.createElement('div');<br>
@@ -21,7 +21,7 @@ new El('+p.example-desc@#ex2$(Creating an element withouth retrieving it for lat
 var code2 = new El('+code@#ex2').innerHTML = `new El('+elementTag#elementID.elementClass1.elementClass2@#parentID');`;
 
 new El('+div#ex3.example@.container');
-new El('+p.example-desc@#ex3$(Creating a form with method <i>POST</i> and appending a label and an input field of type <i>text</i>)');
+new El('+p.example-desc@#ex3$(Creating a form with method POST and appending a label and an input field of type text)');
 var code2 = new El('+code@#ex3').innerHTML = `
 new El('+form#newForm?(type,POST)');<br>
 new El('+label@#newForm?(for,uname)$(Username:)');<br>

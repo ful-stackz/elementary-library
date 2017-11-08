@@ -196,10 +196,10 @@ El.prototype.createModel = function(query) {
     } 
     /* Else the element is not <input> or <button>
      * such an element holds its value in the
-     * innerHTML attribute
+     * innerText attribute
     !*/
     else {
-        model.innerHTML = value;
+        model.innerText = value;
     }
 
     /* If type attribute is specified
@@ -217,11 +217,11 @@ El.prototype.createModel = function(query) {
     !*/
     if (model.placeholder)
         model.placeholder = model.placeholder[0].slice(2, model.placeholder[0].length - 1);
-    /* If innerHTML is specified
-     * $(innerHTML) => innerHTML
+    /* If innerText is specified
+     * $(innerText) => innerText
     !*/
-    if (model.innerHTML)
-        model.innerHTML = model.innerHTML[0].slice(2, model.innerHTML[0].length - 1);
+    if (model.innerText)
+        model.innerText = model.innerText[0].slice(2, model.innerText[0].length - 1);
 
     // Return the created model
     return model;
@@ -265,9 +265,9 @@ El.prototype.assembleElement = function(model) {
     if (model.customAttributes)
         model.customAttributes.forEach(a => 
             element.setAttribute(a.slice(0, a.indexOf(',')), a.slice(a.indexOf(',') + 1)));
-    // If innerHTML is given set it
-    if (model.innerHTML)
-        element.innerHTML = model.innerHTML;
+    // If innerText is given set it
+    if (model.innerText)
+        element.innerText = model.innerText;
 
     // Return the HTML element
     return element;
