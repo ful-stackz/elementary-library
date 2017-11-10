@@ -1,4 +1,4 @@
-var El = function(query) {
+var El = function(query, toAppend) {
     /* @this.model 
      * will contain the model object,
      * from which an HTML element
@@ -15,6 +15,13 @@ var El = function(query) {
      * query string
     !*/
     this.query = query;
+    /* @this.toAppend
+     * determines whether to
+     * append the element [true]
+     * or just return the 
+     * assembled element [false]
+    !*/
+    this.toAppend = toAppend === undefined ? true : toAppend;
     /* @this.DOMLoaded
      * determines whether the <body>
      * of the El has been loaded
@@ -51,7 +58,7 @@ var El = function(query) {
      * to be appended when the
      * El is loaded
     !*/
-    if (this.DOMLoaded == false)
+    if (this.DOMLoaded == false && this.toAppend)
         El_Queue.push({ 
             queued: true,
             model: this.model,
@@ -73,7 +80,8 @@ var El = function(query) {
      * to the given parent
     !*/
     if (this.model.parent
-        && this.DOMLoaded)
+        && this.DOMLoaded
+        && this.toAppend)
         this.append(this.element, this.model);
 
     // Return the HTML element
