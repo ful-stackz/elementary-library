@@ -293,7 +293,7 @@ El.prototype.getParent = function(query) {
      * => @.anotherElemWithClass
      * => @body
     !*/
-    parent = query.match(/@(#|\.|\w)\w+/g);
+    parent = query.match(/@(#|\.|\w)(\w+|\-)+/g);
     /* If a parent is specified
      * convert 
      * @#parent => #parent
